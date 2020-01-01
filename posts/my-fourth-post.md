@@ -13,7 +13,8 @@ The text of my fourth post.
 const code = "this is code";
 
 const execute = code => {
-  console.log(code);
+  // highlight-next-line
+  console.log(code); // this should be really long just so we can see highlighting works
 };
 
 execute(code);
