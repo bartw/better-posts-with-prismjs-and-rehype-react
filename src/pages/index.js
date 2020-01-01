@@ -9,9 +9,11 @@ export default () => (
     <div className="mt-4">
       {usePosts().map(({ id, slug, title, date, formattedDate }) => (
         <div key={id} className="mt-2">
-          <time dateTime={date}>{formattedDate}</time>
+          <time dateTime={date} className="text-sm text-gray-600">
+            {formattedDate}
+          </time>
           <Link to={slug}>
-            <h1>{title}</h1>
+            <h1 className="font-bold text-lg">{title}</h1>
           </Link>
         </div>
       ))}

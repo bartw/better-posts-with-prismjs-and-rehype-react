@@ -13,9 +13,11 @@ export default ({
   return (
     <Layout>
       <div className="mt-4">
-        <time dateTime={date}>{formattedDate}</time>
-        <h1>{title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <time dateTime={date} className="text-sm text-gray-600">
+          {formattedDate}
+        </time>
+        <h1 className="font-bold text-lg">{title}</h1>
+        <div className="mt-2" dangerouslySetInnerHTML={{ __html: html }} />
       </div>
     </Layout>
   );
